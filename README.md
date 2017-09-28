@@ -6,10 +6,11 @@ Scoop is a command-line installer for Windows.
 Requirements:
 
 * [PowerShell 3](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
-* PowerShell must be enabled for your user account e.g. `set-executionpolicy remotesigned -s cu`
 
-To install:
+To install, type the following in a Powershell window:
 
+    set-executionpolicy remotesigned -s cu
+    (New-Object System.Net.WebClient).Proxy.Credentials=[System.Net.CredentialCache]::DefaultNetworkCredentials
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 Once installed, run `scoop help` for instructions.
